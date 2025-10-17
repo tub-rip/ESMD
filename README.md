@@ -1,8 +1,7 @@
 # Simultaneous Motion And Noise Estimation with Event Cameras (ICCV 2025)
 
-This is the official repository for [**Simultaneous Motion And Noise Estimation with Event Cameras**](https://arxiv.org/abs/2504.04029), **ICCV 2025** by  
-[Shintaro Shiba](http://shibashintaro.com/), [Yoshimitsu Aoki](https://aoki-medialab.jp/aokiyoshimitsu-en/) and [Guillermo Callego](https://sites.google.com/view/guillermogallego).
-
+This is the official repository for [**Simultaneous Motion And Noise Estimation with Event Cameras**](https://arxiv.org/abs/2504.04029), **ICCV 2025** by [Shintaro Shiba](http://shibashintaro.com/), [Yoshimitsu Aoki](https://aoki-medialab.jp/aokiyoshimitsu-en/) and [Guillermo Callego](http://www.guillermogallego.es).
+<h2 align="left">
 
 [PDF](https://arxiv.org/pdf/2504.04029) | [Poster](docs/2025_ICCV_ESMD_poster.pdf) | Video 
 </h2>
