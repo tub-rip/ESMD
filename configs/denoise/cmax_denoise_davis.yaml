@@ -1,0 +1,57 @@
+is_dnn: false
+
+data:
+  root: ""
+  dataset: "DAVIS_DATA"
+  # sequence: "slider_close"
+  sequence: "dynamic_translation"
+  # sequence: "poster_translation"
+  # dataset: "IROS_Dataset"
+  # sequence: "what_is_background"
+  height: 180
+  width: 240
+  ind1: 200000
+  ind2: 260000
+  # ind1: 200000 
+  # ind2: 240000  # good for DAVIS dataset, poster translation.
+
+output:
+  output_dir: "./outputs/denoise/cmax/0.7"
+  show_interactive_result: false
+
+solver:
+  method: "denoiser_contrast_maximization"
+  denoise:
+    target_ratio: 0.7  # select 80% of events as signal.
+    random_initialization: False
+  # motion_model: "dense-flow"
+  warp_direction: "first"
+  initialize: "random"
+  initialize_abs: 10
+  # warp_direction: "middle"
+  motion_model: "2d-translation"
+  parameters:
+    - "trans_x"
+    - "trans_y"
+  # cost: "image_variance"
+  cost: "hybrid"
+  outer_padding: 0
+  cost_with_weight:
+    # image_variance: 1.0
+    # normalized_image_variance: 1.0
+    # gradient_magnitude: 1.0
+    normalized_gradient_magnitude: 1.0
+    # scaled_average_timestamp: 1.0
+    # average_timestamp: 1.0
+    # deformation_map: 10.0
+    # area: 1.0
+  iwe:
+    method: "bilinear_vote"
+    blur_sigma: 1
+
+optimizer:
+  method: "Adam"
+  lr: 0.1
+  n_iter: 1000
+  # method: "BFGS"
+  # method: "CG"
